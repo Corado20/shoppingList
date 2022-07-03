@@ -13,20 +13,42 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
     <title>ShoppingList</title>
   </head>
   <body>
-    <div class="container">
-      <h1><i class="fas fa-user"></i> ShoppingList</h1>
+    <div class="container bg-light mx-auto text-center">
+      <h1 class="text-primary mb-5 h1">
+        <i class="fas fa-user"></i> ShoppingList
+      </h1>
       <div class="form-group">
-        <input type="text" id="txtItem" placeholder="New text..." />
-        <button id="btnAdd" class="btn">Add item</button>
+        <label class="text-info h4" for="text">Input your item</label>
+        <input
+          class="form-control"
+          type="text"
+          id="txtItem"
+          placeholder="New text..."
+        />
+        <small class="form-text text-muted"
+          >Add to the list things you want to buy</small
+        >
+        <button id="btnAdd" class="btn btn-primary btn-md">Add item</button>
       </div>
-      <div class="list-container">
-        <h2>Elements</h2>
-        <input type="text" id="txtFilter" placeholder="Filter..." />
-        <ul id="list"></ul>
-        <button id="btnClear">Clear the list</button>
+      <div class="card bg-dark">
+        <h2 class="card-title text-white">Items</h2>
+        <input
+          class="form-control"
+          type="text"
+          id="txtFilter"
+          placeholder="Filter..."
+        />
+        <ul class="list-group mb-5" id="list"></ul>
+        <button id="btnClear" class="btn btn-primary">Clear the list</button>
       </div>
     </div>
     <script src="/javaScript.js"></script>
